@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Talha Riaz</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-accent">Talha Riaz</span>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="subtitle">AI / ML Engineering Intern</span>
+                    <h1> Hello! I am Muhammad Talha Riaz, a Computer Science undergraduate and AI/ML researcher.</h1>
+                    <p>
+                         I specialize in building predictive machine learning models.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="section-title">
+                <h2>Technical Toolkit</h2>
+                <p>The technologies, frameworks, and tools I use to build intelligent systems.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Machine Learning & Deep Learning</h3>
+                    <p>PyTorch, TensorFlow, Keras, Scikit-Learn, ST-GCN, LSTM networks.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Model Interpretability & Data Science</h3>
+                    <p>SHAP, LIME, Pandas, NumPy, Kaggle Environments, Data Preprocessing.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web & App Development</h3>
+                    <p>HTML5, CSS3, JavaScript, Node.js, MERN Stack (MongoDB, Express, React, Node), pnpm.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Cloud</h3>
+                    <p>Git, GitHub, Google Cloud Platform (GCP), MediaPipe, Windows Environment Terminal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>A selection of recent academic and personal research initiatives.</p>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <span class="project-tag">Computer Vision</span>
+                        <h3>Face Shape Analyzer & AI Hairstyle Detector</h3>
+                        <p>Developed an intelligent system using MediaPipe FaceMesh and a Random Forest Classifier wrapped in a Flask API 
+                            to detect human face shapes and recommend personalized hairstyles.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <span class="project-tag">Deep Learning / Time-Series</span>
+                        <h3>Earthquake Magnitude Predictor</h3>
+                        <p>Engineered and optimized a Stacked LSTM deep learning network on Kaggle using historical earthquake datasets to 
+                            predict seismic magnitudes and analyze geospatial trends.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <span class="project-tag">Full-Stack Web Portal</span>
+                        <h3>FYP Connect</h3>
+                        <p>A full-stack MERN (MongoDB, Express, React, Node.js) web application designed to connect university students with 
+                            faculty advisors and manage final year projects seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Let's Collaborate</h2>
+                    <p>I am always open to discussing research collaborations, open-source AI projects, or internship opportunities. Shoot me a message!</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> <a href="mailto:talhariaz1746@gmail.com">talhariaz1746@gmail.com</a></p>
+                        <p><strong>Location:</strong> Punjab, Pakistan</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Let's build something amazing together..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>2026 Muhammad Talha Riaz. All rights reserved.</p>
+        <p>Built with pure HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
