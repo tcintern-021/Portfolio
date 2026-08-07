@@ -1,0 +1,148 @@
+/* ==========================================================================
+   AboutSection Module Styles
+   ========================================================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* ── Main Narrative Card ── */
+.narrative {
+  padding: var(--space-2xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.narrativeIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--color-text-primary);
+}
+
+.narrative h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.narrative p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* ── Right Column ── */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ── Info Cards ── */
+.infoCard {
+  padding: var(--space-xl);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-primary);
+}
+
+.cardHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ── Education Details ── */
+.eduDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.institution {
+  font-weight: 600;
+  color: var(--color-text-primary) !important;
+  font-size: 0.95rem !important;
+}
+
+.campus {
+  font-size: 0.85rem !important;
+  color: var(--color-text-muted) !important;
+}
+
+.degree {
+  font-size: 0.9rem !important;
+  color: var(--color-text-secondary) !important;
+  margin-top: var(--space-xs);
+}
+
+.eduMeta {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ── Achievement ── */
+.achievementText {
+  font-size: 0.95rem !important;
+  line-height: 1.7;
+}
+
+.achievementText strong {
+  color: var(--color-text-primary);
+}
+
+/* ── Certifications List ── */
+.certList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.certItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.certItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.certTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.certMeta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

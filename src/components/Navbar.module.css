@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Navbar Module Styles
+   ========================================================================== */
+
+/* ── Fixed Navigation Bar ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  transition: background var(--transition-base),
+              backdrop-filter var(--transition-base),
+              border-color var(--transition-base);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 34, 0.85);
+  backdrop-filter: var(--glass-blur-ui);
+  -webkit-backdrop-filter: var(--glass-blur-ui);
+  border-bottom-color: var(--glass-border);
+}
+
+/* ── Nav Content Layout ── */
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Brand Logo ── */
+.brand {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary) !important;
+  transition: opacity var(--transition-fast);
+}
+
+.brand:hover {
+  opacity: 0.8;
+}
+
+/* ── Desktop Links ── */
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary) !important;
+  position: relative;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-fast);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-text-primary);
+  transition: width var(--transition-base);
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--color-text-primary) !important;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+/* ── Scroll Progress Bar ── */
+.progressBar {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--color-text-primary);
+  box-shadow: 0 0 10px var(--color-text-primary);
+  z-index: 1002;
+}
+
+/* ── Hamburger Button ── */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: var(--space-xs);
+  z-index: 1001;
+}
+
+/* ── Mobile Overlay ── */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 998;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* ── Mobile Drawer ── */
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: rgba(10, 10, 34, 0.95);
+  backdrop-filter: var(--glass-blur-ui);
+  -webkit-backdrop-filter: var(--glass-blur-ui);
+  border-left: 1px solid var(--glass-border);
+  z-index: 999;
+  transition: right var(--transition-base);
+  padding: calc(var(--navbar-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
+}
+
+.mobileDrawer.drawerOpen {
+  right: 0;
+}
+
+.mobileLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mobileLink {
+  display: block;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary) !important;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobileLink:hover,
+.mobileLink.active {
+  color: var(--color-text-primary) !important;
+  background: var(--glass-bg-hover);
+}
+
+.mobileResumeBtn {
+  margin-top: var(--space-lg);
+  width: 100%;
+  text-align: center;
+}
+
+/* ── Responsive: Show hamburger on mobile ── */
+@media (max-width: 768px) {
+  .desktopLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

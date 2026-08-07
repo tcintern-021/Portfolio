@@ -1,0 +1,67 @@
+/* ==========================================================================
+   SkillsSection Module Styles
+   ========================================================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* ── Group Card ── */
+.groupCard {
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  height: 100%;
+}
+
+/* ── Group Header ── */
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.groupIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.groupHeader h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* ── Skill Pills Container ── */
+.skillPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .groupCard {
+    padding: var(--space-xl);
+  }
+}

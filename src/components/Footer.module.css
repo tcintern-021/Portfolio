@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Footer Module Styles
+   ========================================================================== */
+
+.footer {
+  position: relative;
+  z-index: 10;
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-top: 1px solid var(--glass-border);
+  background: rgba(10, 10, 34, 0.6);
+  backdrop-filter: var(--glass-blur-ui);
+  -webkit-backdrop-filter: var(--glass-blur-ui);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.logo {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary) !important;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: var(--color-text-muted) !important;
+}
+
+/* ── Navigation ── */
+.nav {
+  display: flex;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary) !important;
+  transition: color var(--transition-fast);
+}
+
+.nav a:hover {
+  color: var(--color-text-primary) !important;
+}
+
+/* ── Social Icons ── */
+.socials {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--color-text-secondary) !important;
+  transition: all var(--transition-base);
+}
+
+.socialLink:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  color: var(--color-text-primary) !important;
+  transform: translateY(-2px);
+}
+
+/* ── Divider ── */
+.divider {
+  width: 100%;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glass-border),
+    transparent
+  );
+}
+
+/* ── Copyright ── */
+.copyright {
+  font-size: 0.8rem;
+  color: var(--color-text-muted) !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.heart {
+  color: #ff6b6b;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .nav {
+    gap: var(--space-lg);
+  }
+}

@@ -1,0 +1,64 @@
+/* ==========================================================================
+   ContactSection Module Styles
+   ========================================================================== */
+
+/* ── Center the form ── */
+.formWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ── Form Fields ── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* ── Submit Button ── */
+.submitBtn {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 0.95rem;
+  margin-top: var(--space-sm);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ── Spinner Animation ── */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ── Success Message ── */
+.successMsg {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(120, 255, 150, 0.8) !important;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .form {
+    padding: var(--space-xl);
+  }
+}

@@ -1,0 +1,138 @@
+/* ==========================================================================
+   HeroSection Module Styles
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── Content sits above the 3D canvas ── */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-top: var(--navbar-height);
+}
+
+/* ── Large Moniker ── */
+.monikerWrapper {
+  margin-bottom: var(--space-sm);
+}
+
+.moniker {
+  font-family: var(--font-mono);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--color-text-primary);
+  line-height: 1;
+  text-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ── Name ── */
+.name {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  animation: fadeInUp 0.8s ease-out 0.1s backwards;
+}
+
+.nameSpacer {
+  display: inline;
+}
+
+/* ── Headline ── */
+.headline {
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 600;
+  color: var(--color-text-primary) !important;
+  letter-spacing: 0.02em;
+  max-width: none;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.ampersand {
+  font-weight: 300;
+  opacity: 0.6;
+  margin: 0 0.15em;
+}
+
+/* ── Tagline ── */
+.tagline {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  max-width: 550px;
+  color: var(--color-text-muted) !important;
+  line-height: 1.7;
+  animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+/* ── CTA Buttons ── */
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+/* ── Scroll Indicator ── */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-text-primary),
+    transparent
+  );
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh; /* safe viewport height on mobile */
+  }
+
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .ctas a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .moniker {
+    font-size: 4.5rem;
+  }
+
+  .name {
+    letter-spacing: 0.08em;
+  }
+}
