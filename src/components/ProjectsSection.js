@@ -35,7 +35,7 @@ function generateSubdomain(repoName) {
 function getLiveDemoUrl(repoName, config) {
   if (config.url) return config.url;
   const subdomain = config.subdomain || generateSubdomain(repoName);
-  return `https://${subdomain}.thatalhariaz.com`;
+  return `https://${subdomain}.thetalhariaz.com`;
 }
 
 /* ── Category Constants ── */
