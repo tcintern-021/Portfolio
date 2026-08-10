@@ -18,8 +18,9 @@ import styles from './ProjectsSection.module.css';
 
 /* ── Live Deployment Configuration ── */
 const LIVE_PROJECTS = {
-  "rag-chat": { enabled: true, subdomain: "rag-chatbot" },
-  "Ai-Email-Generator-LangSmith": { enabled: true, subdomain: "ai-email-generator" },
+  "Pakistan-Law-RAG-Assistant": { enabled: true, subdomain: "pakistan-law-rag-assistant" },
+  "profile": { enabled: true, url: "https://thetalhariaz.com" },
+  "Portfolio": { enabled: true, url: "https://thetalhariaz.com" },
 };
 
 function generateSubdomain(repoName) {
