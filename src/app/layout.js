@@ -3,6 +3,7 @@
  * Provides global fonts, metadata, and HTML structure for the entire app.
  */
 import './globals.css';
+import ChunkErrorHandler from '../components/ChunkErrorHandler';
 
 /* ── SEO & Open Graph Metadata ── */
 export const metadata = {
@@ -56,7 +57,10 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <ChunkErrorHandler />
+        {children}
+      </body>
     </html>
   );
 }
