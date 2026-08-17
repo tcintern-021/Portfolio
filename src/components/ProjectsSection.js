@@ -19,8 +19,10 @@ import styles from './ProjectsSection.module.css';
 
 /* ── Live Deployment Configuration ── */
 const LIVE_PROJECTS = {
-  "Pakistan-Law-RAG-Assistant": { enabled: true, subdomain: "pakistan-law-rag-assistant" },
-  "profile": { enabled: true, url: "https://thetalhariaz.com" },
+  "Pakistan-Law-RAG-Assistant": { enabled: true, subdomain: "law-assistant" },
+  "AI-Agents": { enabled: true, subdomain: "ai-lab" },
+  "rag-chat": { enabled: true, subdomain: "rag-lab" },
+  "AI-prompt-landing-page": { enabled: true, subdomain: "prompt-studio" },
   "Portfolio": { enabled: true, url: "https://thetalhariaz.com" },
 };
 
@@ -231,9 +233,8 @@ export default function ProjectsSection() {
             {Object.values(SECTIONS).map((sec) => (
               <button
                 key={sec}
-                className={`${styles.sectionBtn} ${
-                  activeSection === sec ? styles.active : ''
-                }`}
+                className={`${styles.sectionBtn} ${activeSection === sec ? styles.active : ''
+                  }`}
                 onClick={() => {
                   setActiveSection(sec);
                   setActiveFilter(CATEGORIES.ALL);
@@ -251,9 +252,8 @@ export default function ProjectsSection() {
             {sectionCategories.map((cat) => (
               <button
                 key={cat}
-                className={`${styles.filterBtn} ${
-                  activeFilter === cat ? styles.active : ''
-                }`}
+                className={`${styles.filterBtn} ${activeFilter === cat ? styles.active : ''
+                  }`}
                 onClick={() => setActiveFilter(cat)}
               >
                 {cat}
